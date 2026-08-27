@@ -11,6 +11,7 @@ export async function getUserFromRequest(req: Request) {
         headers: {
             Cookie: cookieHeader || '',
         },
+        withCredentials: true
     });
 
     console.log(response.data)
