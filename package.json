@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run generate && tsc",
     "generate": "npx prisma generate --schema=./prisma/schema.prisma",
+    "postinstall": "npx prisma generate --schema=./prisma/schema.prisma",
     "dev": "npx tsx --watch src/server.js"
   },
   "keywords": [],
