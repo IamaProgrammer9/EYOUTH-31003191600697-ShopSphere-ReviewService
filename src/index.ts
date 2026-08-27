@@ -8,6 +8,8 @@ import { writeProductReview } from './controllers/add-review';
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     limit: 150,
