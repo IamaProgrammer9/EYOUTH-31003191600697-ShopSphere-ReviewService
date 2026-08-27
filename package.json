@@ -1,0 +1,20 @@
+{
+  "name": "reviews_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run generate && tsc",
+    "generate": "npx prisma generate --schema=./prisma/schema.prisma",
+    "dev": "tsx --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/axios": "^0.9.36",
+    "axios": "^1.20.0",
+    "mongodb": "^7.5.0"
+  }
+}
