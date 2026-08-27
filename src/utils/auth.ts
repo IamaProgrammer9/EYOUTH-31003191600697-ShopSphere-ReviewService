@@ -4,8 +4,6 @@ import axios from "axios";
 export async function getUserFromRequest(req: Request) {
     const token = req.cookies?.accessToken;
 
-    console.log(`Cookies: ${req.cookies}`);
-
     const cookieHeader = req.headers.cookie;
 
     // Pass the Cookie header along to Server B
