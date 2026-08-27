@@ -4,7 +4,7 @@ import axios from "axios";
 export async function getUserFromRequest(req: Request) {
     const token = req.cookies?.accessToken;
 
-    console.log(req.cookies)
+    console.log(`Cookies: ${req.cookies}`);
 
     const cookieHeader = req.headers.cookie;
 
