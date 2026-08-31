@@ -3,8 +3,8 @@ import prisma from "../lib/prisma";
 import { getUserFromRequest } from "../utils/auth";
 
 export const writeProductReview = async (req: Request, res: Response) => {
-    const { productId, rating, comment } = req.body;
-    const user = await getUserFromRequest(req);
+    const { productId, rating, comment, accessToken } = req.body;
+    const user = await getUserFromRequest(req, accessToken);
     if (!user) {
         res.status(401).send('Not authenticated');
         return;
