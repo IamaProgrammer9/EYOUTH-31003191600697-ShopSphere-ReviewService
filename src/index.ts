@@ -5,10 +5,16 @@ import cors from "cors";
 import { rateLimit } from "express-rate-limit";
 import { getProductReviews } from './controllers/get-reviews';
 import { writeProductReview } from './controllers/add-review';
+import morgan from 'morgan';
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
 app.set('trust proxy', 1);
+
+app.use(morgan('dev'));
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
